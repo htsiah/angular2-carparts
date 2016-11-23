@@ -1,0 +1,14 @@
+<p>There are {{totalCarParts()}} total parts in stock.</p>
+<ul>
+	<!-- carParts in an array object defined in AppComponent Class. -->
+	<!-- carPart is a local variable. -->
+	<li *ngFor="let carPart of carParts" [class.featured]="carPart.featured">
+		<h2>{{carPart.name | uppercase}}</h2>
+		<img [src]="carPart.image">
+		<p class="description">{{carPart.description}}</p>
+		<p class="price">{{carPart.price | currency:"EUR":true}}</p>
+		<p *ngIf="carPart.inStock > 0">{{carPart.inStock}} in stock</p>
+		<p *ngIf="carPart.inStock === 0">Out of stock</p>
+		<p><button (click)="downQuality(carPart)">-</button> {{carPart.quantity}} <button (click)="upQuality(carPart)">+</button></p>
+	</li>
+</ul>
