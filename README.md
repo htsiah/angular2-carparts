@@ -1,4 +1,5 @@
 <h1>Learning Basis Angular 2</h1>
+Angular is a framework for dynamic web application. Angular has 2 versions and both version works very different. In this article, I am going talk about Angular 2.
 <p>
   <a href="http://scalaoncloud.blogspot.my/2016/11/angular-2-part-1-my-first-component_81.html">Part 1 - My First Component</a>
 </p>
