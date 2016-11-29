@@ -9,19 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var mocks_1 = require('./mocks');
+var racing_data_service_1 = require('./racing-data.service');
 var CarPartComponent = (function () {
-    function CarPartComponent() {
+    // Declare a constructor
+    function CarPartComponent(racingDataService) {
+        this.racingDataService = racingDataService;
     }
     CarPartComponent.prototype.ngOnInit = function () {
-        this.carParts = mocks_1.CARPARTS;
+        var _this = this;
+        this.racingDataService.getCarParts()
+            .subscribe(function (carParts) { return _this.carParts = carParts; }); // When carParts arrive on our data stream, set it equal to our local carParts array.
     };
     CarPartComponent.prototype.totalCarParts = function () {
         var sum = 0;
-        for (var _i = 0, _a = this.carParts; _i < _a.length; _i++) {
-            var carPart = _a[_i];
-            sum += carPart.inStock;
+        if (Array.isArray(this.carParts)) {
+            for (var _i = 0, _a = this.carParts; _i < _a.length; _i++) {
+                var carPart = _a[_i];
+                sum += carPart.inStock;
+            }
         }
+        ;
         return sum;
     };
     CarPartComponent.prototype.upQuality = function (carPart) {
@@ -38,7 +45,7 @@ var CarPartComponent = (function () {
             templateUrl: "app/car-parts.component.html",
             styleUrls: ["app/car-parts.component.css"]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [racing_data_service_1.RacingDataService])
     ], CarPartComponent);
     return CarPartComponent;
 }());

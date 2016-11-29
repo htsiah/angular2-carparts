@@ -1,0 +1,34 @@
+{
+	"data" : [
+		{ 
+			"id":1,
+			"name":"Super Tires",
+			"price":2.0,
+			"description":"These tires are the very best",
+			"inStock":5,
+			"image":"/images/example1.png",
+			"featured":false,
+			"quantity":0
+		},
+		{
+			"id":2,
+			"name":"Reinforced shocks",
+			"price":4.99,
+			"description":"Shock made from krytonite",
+			"inStock":4,
+			"image":"/images/example2.png",
+			"featured":true,
+			"quantity":0
+		},
+		{
+			"id":3,
+			"name":"Padded Seats",
+			"price":2,
+			"description":"Super soft scats for a smooth ride.",
+			"inStock":0,
+			"image":"/images/example3.png",
+			"featured":false,
+			"quantity":0
+		}
+	]
+}

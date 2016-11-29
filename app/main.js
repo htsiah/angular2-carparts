@@ -13,14 +13,18 @@ var app_component_1 = require('./app.component');
 var car_parts_component_1 = require('./car-parts.component');
 var platform_browser_1 = require('@angular/platform-browser');
 var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
+var racing_data_service_1 = require('./racing-data.service');
+var http_1 = require('@angular/http');
+var forms_1 = require('@angular/forms');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
             declarations: [app_component_1.AppComponent, car_parts_component_1.CarPartComponent],
-            bootstrap: [app_component_1.AppComponent] // Indicate first component to launch.
+            bootstrap: [app_component_1.AppComponent],
+            providers: [racing_data_service_1.RacingDataService] // Now all subcomponents can ask for (inject) our RacingDataService.
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

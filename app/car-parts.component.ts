@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {CarPart} from './car-part';
-import {CARPARTS} from './mocks';
+import { RacingDataService } from './racing-data.service';
 
 @Component({
   selector: "car-parts", // Display in selector defined in app.component.ts
@@ -11,15 +11,21 @@ import {CARPARTS} from './mocks';
 export class CarPartComponent {
   carParts : CarPart[];
   
+  // Declare a constructor
+  constructor (private racingDataService: RacingDataService) {}
+  
   ngOnInit() {
-	this.carParts = CARPARTS;
+	this.racingDataService.getCarParts()
+		.subscribe(carParts => this.carParts = carParts); // When carParts arrive on our data stream, set it equal to our local carParts array.
   }
   
   totalCarParts(){
     let sum = 0;
-	for (let carPart of this.carParts) {
-	  sum += carPart.inStock;
-	}
+	if(Array.isArray(this.carParts)) {
+		for (let carPart of this.carParts) {
+			sum += carPart.inStock;
+		}
+	};
 	return sum;
   }
   
