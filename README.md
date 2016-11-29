@@ -17,7 +17,7 @@
   <a href="http://scalaoncloud.blogspot.my/2016/11/angular-2-part-43-two-way-binding.html">Part 4.3 - Two-way Binding</a>
 </p>
 <p>
-  <a href="http://scalaoncloud.blogspot.my/2016/11/angular-2-part-5-service.html">Angular 2 Part 5.1 - Service</a><br/>
-  <a href="http://scalaoncloud.blogspot.my/2016/11/angular-2-part-52-service-using.html">Angular 2 Part 5.2 - Service using Dependency Injector</a>
-  <a href="http://scalaoncloud.blogspot.my/2016/11/angular-2-part-53-http.html">Angular 2 Part 5.3 - HTTP</a>
+  <a href="http://scalaoncloud.blogspot.my/2016/11/angular-2-part-5-service.html">Part 5.1 - Service</a><br/>
+  <a href="http://scalaoncloud.blogspot.my/2016/11/angular-2-part-52-service-using.html">Part 5.2 - Service using Dependency Injector</a>
+  <a href="http://scalaoncloud.blogspot.my/2016/11/angular-2-part-53-http.html">Part 5.3 - HTTP</a>
 </p>
